@@ -112,6 +112,12 @@ end
 
 
 def play(board)
+  if won?(board)
+    winner=winner(board)
+    puts "Congratulations #{winner}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  else
   puts "Where would you like to go?"
   input = gets
   index=input_to_index(input)
@@ -122,10 +128,11 @@ def play(board)
     elsif draw?(board)
       puts "Cat's Game!"
     else
-      
+
       move(board,index,current_player(board))
       display_board(board)
       play(board)
     end
   end
+end
 end
