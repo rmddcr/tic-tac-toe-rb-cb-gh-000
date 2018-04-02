@@ -115,7 +115,7 @@ def play(board)
   puts "Where would you like to go?"
   input = gets
   index=input_to_index(input)
-  if valid_move(board,index)
+  if valid_move?(board,index)
     if won?(board)
       winner=winner(board)
       puts "Congratulations #{winner}!"
@@ -126,5 +126,5 @@ def play(board)
       display_board(board)
       play(board)
     end
-  end
+  end 
 end
