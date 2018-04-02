@@ -124,6 +124,7 @@ def play(board)
     end
 
   end
+end
 
 
 
