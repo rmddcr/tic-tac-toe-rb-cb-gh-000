@@ -126,5 +126,5 @@ def play(board)
       display_board(board)
       play(board)
     end
-  end 
+  end
 end
